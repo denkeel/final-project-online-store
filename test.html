@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .block1 {
+            height: 150px;
+            width: 105px;
+            background-color: red;
+            position: relative;
+            transition: width 1s, height 1s;
+        }
+
+        .block1 .block2 {
+            height: 0px;
+            width: 0px;
+            background-color: pink;
+            transition: width 1s, height 1s;
+           opacity: 0;
+            position: absolute;
+        }
+
+        .block1:hover .block2 {
+            width: 200px;
+            opacity: 1;
+            transition: width 1s, height 1s;
+            height: 100px;
+            display: block;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="block1"><div class="block2"></div></div>
+    
+</body>
+
+</html>
