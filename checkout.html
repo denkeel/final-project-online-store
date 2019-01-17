@@ -18,10 +18,42 @@
                     <img class="logo-img" src="img/Logo.png" alt="Brand"> BRAN
                     <span class="logo-d">D</span>
                 </a>
-                <form action="#" class="header-form">
-                    <div class="browse">Browse<i class="fas fa-caret-down"></i></div>
-                    <input type="text" placeholder="Search for Item...">
-                    <button><i class="fas fa-search"></i></button>
+                <form action="#" class="header-form search">
+                    <div class="browse search__dropdown-button">
+                        Browse
+                        <i class="fas fa-caret-down"></i>
+                        <div class="search__dropdown">
+                            <div class="mega__prime-column">
+                                <div class="mega__column">
+                                    <h2 class="mega__h2">Women</h2>
+                                    <div class="hr mega__hr"></div>
+                                    <ul class="mega__list">
+                                        <li><a class="mega__a" href="#">Dresses</a></li>
+                                        <li><a class="mega__a" href="#">Tops</a></li>
+                                        <li><a class="mega__a" href="#">Sweaters/Knits</a></li>
+                                        <li><a class="mega__a" href="#">Jackets/Coats</a></li>
+                                        <li><a class="mega__a" href="#">Blazers</a></li>
+                                        <li><a class="mega__a" href="#">Denim</a></li>
+                                        <li><a class="mega__a" href="#">Leggings/Pants</a></li>
+                                        <li><a class="mega__a" href="#">Skirts/Shorts</a></li>
+                                        <li><a class="mega__a" href="#">Accessories </a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega__column">
+                                    <h2 class="mega__h2">Men</h2>
+                                    <div class="hr mega__hr"></div>
+                                    <ul class="mega__list">
+                                        <li><a class="mega__a" href="#">Dresses</a></li>
+                                        <li><a class="mega__a" href="#">Tops</a></li>
+                                        <li><a class="mega__a" href="#">Sweaters/Knits</a></li>
+                                        <li><a class="mega__a" href="#">Jackets/Coats</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text search__input" placeholder="Search for Item...">
+                    <button class="search__search-button"><i class="fas fa-search"></i></button>
                 </form>
             </div>
             <div class="header-right">
@@ -152,7 +184,7 @@
                     </div>
                 </div>
             </li>
-            <li class="menu-list"><a href="product.html" class="menu-link">Women</a>
+            <li class="menu-list"><a href="catalog.html" class="menu-link">Women</a>
                 <div class="mega">
                     <div class="mega__prime-column">
                         <div class="mega__column">
@@ -598,6 +630,8 @@
             </div>
         </div>
     </div>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
