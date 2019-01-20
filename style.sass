@@ -1,0 +1,780 @@
+@import "_index_n_catalog"
+
+$pink: #f16d7f
+
+.shop-table
+    table
+        margin-top: 90px
+        width: 100%
+        border-collapse: collapse;
+        margin-bottom: 44px
+        //background-color: red
+        //border: 2px solid blue
+        .row
+            //border: 2px solid blue
+            height: 52px
+            border-bottom: 1px solid #eaeaea
+        .col
+            text-align: center
+            //border: 2px solid blue
+            color: #222222
+            font-size: 13px
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: -0.2px
+            &:first-of-type
+                text-align-last: left
+                width: 460px
+        .row-cart
+            border-bottom: 1px solid #eaeaea
+            height: 162px
+            .col-item
+                //display: flex
+                //border: 2px solid red
+            .product-details
+                display: flex
+                .img-wrap
+                    width: 100px
+                    height: 115px
+                    margin-right: 21px
+                    overflow: hidden
+                    img 
+                        height: 100%
+                        width: 100%
+                .text
+                    margin-top: 13px
+                    h5 
+                        color: #222222
+                        font-size: 13px
+                        font-weight: 700
+                        text-transform: uppercase
+                        margin-bottom: 38px
+                    h6 
+                        color: #6f6e6e
+                        font-size: 13px
+                        font-weight: 700
+                        line-height: 20px
+                        color: #575757
+                        .gray
+                            display: inline-block;
+                            font-weight: 300
+            .price, .free, .subtotal
+                text-align: center
+                color: #656565
+                font-size: 13px
+                font-weight: 400
+            .flex-input
+                display: flex
+                justify-content: center
+                input
+                    padding-left: 10px
+                    width: 44px
+                    max-width: 100px 
+                    height: 30px
+                    border: 1px solid #eaeaea
+                    background-color: #ffffff
+                    text-align: center
+                    outline: none
+                    &:hover
+                        box-shadow: 0 0 10px 1px #00000010
+                    &:focus
+                        box-shadow: 0 0 10px 1px #00000018
+            .flex-a
+                display: flex
+                justify-content: center
+                .button-delete 
+                    color: #c0c0c0
+                    font-size: 16px
+                    &:hover
+                        color: #adadad
+                    &:active
+                        color: #a1a1a1
+    .flex-buttons
+        display: flex
+        justify-content: space-between
+        .button-table
+            display: block
+            height: 50px
+            border: 1px solid #eaeaea
+            background-color: #ffffff
+            color: #4a4a4a
+            font-size: 14px
+            font-weight: 700
+            text-transform: uppercase
+            text-decoration: none
+            line-height: 50px
+            padding: 0 39px
+            &:hover
+                box-shadow: 0 0 10px 1px #eee
+            &:focus
+                background-color: #f16d7f
+                color: #fff
+
+.buy-form
+    .container
+        display: flex
+        justify-content: space-between
+        margin-top: 63px
+        margin-bottom: 79px
+        .column
+            width: 355px
+            h3 
+                color: #222222
+                font-size: 16px
+                font-weight: 700
+                text-transform: uppercase
+            input
+                margin-top: 22px
+                width: 321px
+                height: 45px
+                border: 1px solid #eaeaea
+                background-color: #ffffff
+                outline: none
+                padding: 0 17px
+                font-size: 13px
+                font-weight: 300
+                &:hover
+                    box-shadow: 0 0 10px 1px #00000010
+                &:focus
+                    box-shadow: 0 0 10px 1px #00000018
+            .flex-wrap
+                display: flex
+                .small-button
+                    display: block
+                    height: 35px
+                    border: 1px solid #eaeaea
+                    background-color: #ffffff
+                    text-decoration: none
+                    line-height: 35px
+                    color: #4a4a4a
+                    font-size: 11px
+                    font-weight: 700
+                    text-transform: uppercase
+                    padding: 0 14px
+                    margin-top: 23px
+                    &:hover
+                         box-shadow: 0 0 10px 1px #eee
+                    &:focus
+                        background-color: #f16d7f
+                        color: #fff
+                        border: none
+                        font-weight: 900
+            p 
+                padding-top: 28px
+            .wrap-buy
+                background-color: #f5f3f3
+                padding: 42px 44px
+                text-align: right
+                h2 
+                    color: #222222
+                    font-size: 16px
+                    font-weight: 700
+                    text-transform: uppercase
+                    margin-top: 14px
+                    .pad-pink
+                        color: #f16d7f
+                        padding-left: 20px
+                        display: inline-block
+                h4 
+                    color: #4a4a4a
+                    font-size: 11px
+                    font-weight: 400
+                    text-transform: uppercase
+                    .pad
+                        display: inline-block
+                        padding-left: 20px
+                .hr
+                    border-bottom: 1px solid #e2e2e2
+                    margin-top: 22px
+                .big-button
+                    display: block
+                    height: 50px
+                    //border: 1px solid #eaeaea
+                    background-color: #f16d7f
+                    text-decoration: none
+                    line-height: 50px
+                    color: #ffffff
+                    font-size: 16px
+                    text-align: center
+                    font-weight: 700
+                    text-transform: uppercase
+                    margin-top: 17px
+                    transition: box-shadow .3s
+                    &:hover
+                         box-shadow: 0 0 10px 1px #f16d7faa
+                    &:focus
+                        background-color: white
+                        color: $pink
+                        outline: 3px solid $pink
+                        font-weight: 700
+                        outline-offset: -2px
+
+.mega
+    border-radius: 5px
+    background-color:  #ffffff
+    box-shadow: 0 3px 10px 1px #00000015
+    padding: 25px 21px 21px 21px
+    display: flex
+    //display: none
+    position: absolute
+    border: 1px solid #e9e9e9
+    //width: 0px
+    //heigth: 0px
+    //transition: opacity 3s, transform 3s
+    opacity: 0.0
+    transform: scale(0.95)
+    //transform: skew(33deg, 33deg);
+    z-index: -1
+    &::after
+        content: ""
+        border: 1px solid #e9e9e9
+        background-color:  #ffffff
+        height: 15px
+        width: 15px
+        position: absolute
+        top: -9px
+        left: 25px
+        transform: rotate(45deg)
+        border-bottom: none
+        border-right: none
+        margin: 0 auto
+    &__prime-column
+        width: 235px
+        margin-right: 46px
+        &:last-of-type
+            margin-right: 0
+    &__column
+        margin-top: 47px
+        //overflow: hidden
+        //display: block
+        max-width: 100%
+        &:first-of-type
+            margin-top: 0
+    &__promo-img
+        display: block
+        max-width: 100%
+    &__a
+        display: block
+        text-decoration: none
+        color: #646464
+        font-size: 14px
+        font-weight: 400
+        line-height: 28px
+        height: 100%
+        &:hover
+            color: $pink
+    &__list
+        list-style: none
+    &__h2
+        color:  #232323
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 8px
+    &__hr
+        margin-bottom: 16px
+
+.hr
+    border-top: 1px solid #e8e8e8
+    width: 100%               
+
+.menu
+    &__active
+        border-bottom: 3px solid $pink
+        padding-bottom: 14px
+        color: $pink
+
+.menu-list
+    position: relative
+    //transition: opacity 2s, transform 1s
+
+@for $i from 1 through 7
+    .menu li:nth-child(#{$i}) .mega
+        left: -50px * $i
+
+@for $i from 1 through 7
+    .menu li:nth-child(#{$i}) .mega::after
+        left: 27px + (50px * $i)
+
+.menu-list:hover .mega
+    //display: flex
+    opacity: 1
+    transition: opacity .3s
+    transition: transform cubic-bezier(0.000, 0.815, 0.000, 1.460) .3s
+    //transform: skew(0deg, 0deg)
+    transform: scale(1)
+    z-index: 99999
+
+.checkout
+    padding: 59px 0 90px 0
+    &__h2
+        color: #222222
+        font-size: 16px
+        font-weight: 9  00
+        text-transform: uppercase
+        margin: 31px 0
+
+.step-buy
+    display: flex
+    justify-content: space-between
+    h6 
+        color: #222222
+        font-size: 13px
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 16px
+    p
+        color: #b3b2b2
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+    .required
+        color: red
+        font-size: 13px
+        font-weight: 400
+    &__column1
+        padding-left: 35px
+    &__column2
+        padding-right: 166px
+    &__radio-wrap
+        padding: 31px 0
+    &__input-box
+        display: flex
+        align-items: center
+        &_first
+            margin-bottom: 20px
+    &__label
+        color: #222222
+        font-size: 12px
+        font-weight: 600
+        text-transform: uppercase
+        padding-left: 19px
+    &__p-list
+        &_first
+            margin-top: 33px
+            margin-bottom: 15px
+        &_last
+            margin-bottom: 38px
+    &__two-angle
+        margin-right: 4px
+    &__button-wrap
+        &_column1
+            display: flex
+            justify-content: flex-start
+            margin-bottom: 79px
+        &_column2
+            padding-top: 3px
+            display: flex
+            justify-content: flex-start
+            height: 50px
+            align-items: center            
+    &__form-label
+        margin-bottom: 16px
+        color: #222222
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+        text-transform: uppercase
+        &::after
+            content: " *"
+            color: red
+            font-size: 13px
+            font-weight: 400
+    &__input-column2
+        width: 390px
+        height: 45px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        margin-bottom: 23px
+        padding: 0 20px
+        outline: none
+        transition: box-shadow .2s
+        font-size: 15px
+        font-weight: 400
+        &:hover
+            box-shadow: 0 0 10px 1px #00000010
+        &:focus
+            box-shadow: 0 0 10px 1px #00000018
+        &_email
+            &:invalid
+                box-shadow: 0 0 0px 2px #ff000090
+    &__p
+        &_first
+            margin-bottom: 26px
+    &__req
+        margin-bottom: 32px
+    &__black
+        margin-left: 32px
+        color: black
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+        &:hover
+            text-decoration: none
+
+.white-button 
+    height: 50px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    display: block
+    padding: 0 53px
+    text-decoration: none
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 50px
+    transition: box-shadow .2s
+    &:hover
+        box-shadow: 0 0 10px 1px #eee
+    &:focus
+        background-color: #f16d7f
+        color: #fff
+
+.item-box h4:hover
+    color: $pink
+
+.promo-prod
+    height: 341px
+    background-color: #222224
+    &__wrap
+        display: flex
+        justify-content: space-between
+        padding: 0 25px
+        height: 100%
+    &__item
+        text-align: center
+        color: white
+        display: flex
+        flex-direction: column
+        width: 310px
+        justify-content: center
+        &:hover .promo-prod__img-wrap
+            transform: scale(1.3) rotate(-5deg)
+            transition: transform 0.3s cubic-bezier(0.000, 1.650, 1.000, 1.650)
+    &__text
+        h5 
+            margin-bottom: 17px
+            color: #fbfbfb
+            font-size: 20px
+            font-weight: 700
+            letter-spacing: 0.5px
+        h6
+            color: #fbfbfb
+            font-size: 14px
+            font-weight: 300
+            line-height: 23.95px
+            letter-spacing: 0.35px
+    &__img-wrap
+        margin-bottom: 32px
+        transition: transform 0.3s
+        //transition: transform 1s
+
+.clear-button
+    background: none
+    color: inherit
+    border: none
+    padding: 0
+    font: inherit
+    cursor: pointer
+    outline: inherit
+
+.product
+    margin-top: 71px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 110px
+    &__left
+        width: 238px
+    &__link-block
+        display: block
+        text-decoration: none
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+        text-transform: uppercase
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 36px
+        padding-bottom: 1px
+        padding-left: 11px
+        padding-right: 6px
+        border-bottom: 1px solid #ebebeb
+        //margin-bottom: 18px
+        width: 100%
+        &_active
+            color: $pink
+            margin-bottom: 0px
+    &__arrow
+        transition: transform .4s    
+    &__a-wrap
+        border-left: 5px solid $pink
+        //margin-bottom: 18px
+    &__list-wrap
+        //display: none
+        //padding-left: 17px
+        padding: 18px 0 0px 17px
+        //height: 0%
+        &_active
+            display: block
+    &__list
+        list-style: none
+        height: 0
+        //height: 100%
+        overflow: hidden
+        transition: height .5s
+        text-align-last: left
+        margin-top: -6px
+    &__item
+    &__li-a
+        text-decoration: none
+        display: block
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        line-height: 33px
+        &:hover
+            color: $pink
+    &__wrap-hover
+        &:hover .product__list
+            height: 459px
+    &__button
+        width: 100%
+        &:focus .product__list
+            height: 459px
+        &:focus .product__link-block
+            color: $pink
+        &:focus .product__arrow
+            transform: rotate(180deg)
+    
+    &__right
+        width: 846px
+    &__settings
+        display: flex
+        justify-content: space-between
+    &__s-h3
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+        text-transform: uppercase
+    &__s-column
+        width: 262px
+    &__categories
+        margin-top: 29px
+    &__c-ul
+        list-style: none
+        display: flex
+        font-display: row
+    &__c-button
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        &:focus
+            font-weight: 700
+    &__size-box
+        display: flex
+        flex-wrap: wrap
+        //width: 239px
+        margin-top: 24px
+    &__s-b-item
+        display: flex
+        flex-direction: row
+        align-items: center
+        width: 65px
+        margin-bottom: 13px
+    &_i-label
+        margin: 0 0 0 9px
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        text-transform: uppercase
+    &__range
+        width: 100%
+        margin-top: 20px
+    &__p-text
+        display: flex
+        justify-content: space-between
+    &__p-h6
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+    &__bread-set
+        height: 50px
+        background-color: #f3f3f3
+        display: flex
+        align-items: center
+        padding-left: 10px
+    &__b-name
+        height: 30px
+        border: 1px solid #ebebeb
+        background-color: #ffffff
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        line-height: 30px
+        padding: 0 8px
+        border-right: none
+    &__b-list
+        height: 32px
+        border: 1px solid #ebebeb
+        background-color: #ffffff
+        padding: 0 8px
+        display: flex
+        justify-content: space-between
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        cursor: pointer
+        outline: none
+        &:first-of-type
+            margin-right: 10px
+    &__d-arrow
+        padding-left: 10px
+    &__footer
+        display: flex
+        justify-content: space-between
+    &__numbers
+        padding: 0 15px
+        height: 44px
+        border-radius: 3px
+        border: 1px solid #ebebeb
+        background-color: #ffffff
+        line-height: 44px
+        letter-spacing: 20px
+        color: #c4c4c4
+        font-size: 16px
+        font-weight: bold
+    &__f-button
+        padding: 0 47px
+        height: 44px
+        border-radius: 3px
+        border: 1px solid #ef5b70
+        background-color: #ffffff
+        display: block
+        text-decoration: none
+        line-height: 44px
+        color: #ef5b70
+        font-size: 16px
+        font-weight: bold
+        transition: box-shadow .3s
+        &:hover
+            box-shadow: 0 0 10px 1px #f16d7f77
+        &:focus
+            background-color: $pink
+            color: white
+            //outline: 3px solid $pink
+            font-weight: 700
+            outline-offset: -2px
+        
+.box-items
+    padding-top: 48px
+
+.text-divider
+    padding: 0 10px
+    color: #dfdfdf
+
+.button--hover
+    transition: box-shadow .3s
+    &:hover
+        box-shadow: 0 0 10px 1px #f16d7f77
+    &:focus
+        background-color: #fff
+        color: $pink
+        outline: 3px solid $pink
+        font-weight: 700
+        outline-offset: -2px
+        padding: 0 18px
+
+.flex--a
+    display: flex
+    justify-content: center
+
+.search
+    h2 
+        line-height: 16px
+    .mega__column
+        margin-top: 23px
+        &:first-child
+            margin-top: 0px
+    &__dropdown
+        border-radius: 5px
+        background-color:  #ffffff
+        box-shadow: 0 3px 10px 1px #00000015
+        padding: 25px 21px 21px 21px
+        display: flex
+        //display: none
+        position: absolute
+        border: 1px solid #e9e9e9
+        z-index: 99999
+        display: none
+        &::after
+            content: ""
+            border: 1px solid #e9e9e9
+            background-color:  #ffffff
+            height: 15px
+            width: 15px
+            position: absolute
+            top: -9px
+            left: 25px
+            transform: rotate(45deg)
+            border-bottom: none
+            border-right: none
+            margin: 0 auto
+    &__dropdown-button
+        cursor: pointer
+        transition: box-shadow .3s
+        &:hover
+            box-shadow: 0 0 4px 1px #f16d7f22
+        .fa-caret-down
+            transition: transform .5s
+            color: red
+
+.focus
+    //background-color: #fff
+    color: white
+    border: none
+    background-image: none
+    border: 1px solid $pink
+    background-color: $pink
+    //outline: 3px solid $pink
+    font-weight: 700
+    //outline-offset: -2px
+    padding: 0 14px
+    padding-left: 13px  
+    transition: transform .5s
+
+.rotate
+    color: white!important
+    transition: color transform .5s
+    transform: rotate(180deg)
+
+.cart
+    display: none
+
+.header-right:hover .cart
+    margin-top: 10px
+    border-radius: 5px
+    background-color:  #ffffff
+    box-shadow: 0 3px 10px 1px #00000015
+    padding: 21px 21px 21px 21px
+    display: flex
+    position: absolute
+    border: 1px solid #e9e9e9
+    z-index: 99999
+    //display: none
+    &::after
+        content: ""
+        border: 1px solid #e9e9e9
+        background-color:  #ffffff
+        height: 15px
+        width: 15px
+        position: absolute
+        top: -9px
+        left: 9px
+        transform: rotate(45deg)
+        border-bottom: none
+        border-right: none
+        margin: 0 auto
