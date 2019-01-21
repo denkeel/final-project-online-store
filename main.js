@@ -1,8 +1,29 @@
 $(document).ready(() => {
-    $('.search__dropdown-button').on('click', (e) => {
-        console.log('clock');
-        $('.search__dropdown').fadeToggle();
-        $(e.currentTarget).toggleClass('focus');
-        $(e.currentTarget).find('.fa-caret-down').toggleClass('rotate');
+    new BrowseDropdown();
+
+    let cart = new Cart('getCart.json');
+
+    $('.add').click(e => {
+        cart.addProduct(e.target);
     });
+
+    //Удаление товара
+    $('.cart').on('click', '.cart__delete-btn', e => {
+        e.preventDefault();
+        cart.remove(e.currentTarget);
+
+    });
+
+    //добавляю атрибуты к кнопкам c данными из тегов html
+    $('.item-box').each((index, box) => {
+        console.log(box);
+        let $btn = $(box).find('.add');
+        $btn.attr("data-id", index);
+        $btn.attr("data-price", '52');
+        $btn.attr("data-name", 'MANGO PEOPLE T-SHIRT');
+    })
 });
+
+// Непонятно нужно ли мне теперь для каждого элемента, для которого я хочу создать логику
+// создавать свой класс?
+// Или куда пихать все эти обработчики событий?

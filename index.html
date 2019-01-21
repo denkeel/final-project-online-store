@@ -20,7 +20,7 @@
                 </a>
                 <form action="#" class="header-form search">
                     <div class="browse search__dropdown-button">
-                        Browse
+                        <span>Browse</span>
                         <i class="fas fa-caret-down"></i>
                         <div class="search__dropdown">
                             <div class="mega__prime-column">
@@ -60,14 +60,16 @@
                 <a class="img-cart" href="cart.html">
                     <img src="img/cart.svg" alt="Your cart">
                     <div class="cart">
-                        The cart is empty.
+                        <div class="cart__empty">The cart is empty.
+                            <div class="hr"></div>
+                        </div>
                     </div>
                 </a>
                 <a href="#" class="button button--hover">My account<i class="fas fa-caret-down"></i></a>
             </div>
         </div>
     </header>
-    <nav>
+    <nav> 
         <ul class="menu container">
             <li class="menu-list">
                 <a href="index.html" class="menu-link menu__active">Home</a>
@@ -749,7 +751,8 @@
     </footer>
     <div class="footer">
         <div class="container">
-            <p>© 2017 Brand All Rights Reserved.</p>
+            <p>© 2017-
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved.</p>
             <div class="social">
                 <a href="#" class="item"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="item"><i class="fab fa-twitter"></i></a>
@@ -760,11 +763,10 @@
         </div>
     </div>
 
-    //scripts
     <script src="jquery-3.3.1.js"></script>
     <script src="main.js"></script>
-    <script src="jquery-3.3.1.js"></script>
-    <script src="main.js"></script>
+    <script src="Dropdown.js"></script>
+    <script src="Cart.js"></script>
 </body>
 
 </html>
