@@ -8,31 +8,48 @@ class BrowseDropdown extends Dropdown {
     constructor() {
         super();
         $('.search__dropdown-button').on('click', (e) => {
-            this._show(e);
-            if (this.active) {
-                $('body').on('click', (e) => {
-                    this._hide(e);
-                });
-            }
+            this._toggle(e);
         });
-    }
+        $(document).on('click', (e) => {
+            if ($(event.target).closest('.search__dropdown-button').length === 0) {
+                this._hide(e);
+            };
+        });
+        /*
+        $('body').on('click', (e) => {
+            if (this.active === true)
+                this._hide(e);
+        });*/
+    };
 
-    _show(e) {
-        console.log('clock');
-        $('.search__dropdown').fadeIn();
-        $(e.currentTarget).addClass('focus');
-        $(e.currentTarget).find('.fa-caret-down').addClass('rotate');
-        this.active = true;
+
+    _toggle(e) {
+        $('.search__dropdown').toggle();
+        $(e.currentTarget).toggleClass('focus');
+        $(e.currentTarget).find('.fa-caret-down').toggleClass('rotate');
+        if (this.active === false) {
+            this.active = true;
+        } else {
+            this.active = false;
+        }
     }
 
     _hide(e) {
-        console.log('false clock');
-        console.log(this.active);
+
+        //console.log(this.active);
         if (this.active) {
             $('.search__dropdown').fadeOut();
-            $(e.currentTarget).removeClass('focus');
-            $(e.currentTarget).find('.fa-caret-down').removeClass('rotate');
+            $('.header-left').find('.search__dropdown-button').removeClass('focus');
+            $('.header-left').find('.fa-caret-down').removeClass('rotate');
             super.active = false;
         }
     }
+
+    _showStatus(status) {
+        if (status === true) {
+            console.log('открыто');
+        } else {
+            console.log('закрыто');
+        }
+    };
 }

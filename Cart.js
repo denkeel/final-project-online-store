@@ -23,14 +23,14 @@ class Cart {
 
         let $buttonCheckout = $('<a/>', {
             href: 'checkout.html',
-            class: 'white-button cart__button',
+            class: 'cart__button',
             text: 'checkout'
         });
         $buttonCheckout.appendTo($(this.container));
 
         let $buttonCart = $('<a/>', {
             href: 'cart.html',
-            class: 'white-button cart__button',
+            class: 'cart__button',
             text: 'go to cart'
         });
         $buttonCart.appendTo($(this.container));
@@ -60,8 +60,9 @@ class Cart {
         })
         $wrapImg.append($('<img/>', {
             class: 'cart__img',
-            src: 'img/item4.jpg'
+            src: product.img
         }));
+        //console.log(product.img);
         $wrapImg.appendTo($container);
 
         let $cart__text = $('<div/>', {
@@ -96,8 +97,7 @@ class Cart {
     }
     _updateCart(product) {
         let $container = $(`div[data-product=${product.id_product}]`);
-        $container.find('.product-quantity').text(product.quantity);
-        $container.find('.product-price').text(`${product.quantity * product.price} руб.`);
+        $container.find('.cart__qty-name').text(`${product.quantity} x $${product.price}`);
     }
     addProduct(element) {
         let productId = +$(element).data('id');
@@ -112,8 +112,10 @@ class Cart {
                 id_product: productId,
                 product_name: $(element).data('name'),
                 price: +$(element).data('price'),
-                quantity: 1
+                quantity: 1,
+                img: $(element).data('img')
             };
+            //console.log(product.img)
             this.cartItems.push(product);
             this.amount += product.price;
             this.countGoods += product.quantity;
@@ -150,7 +152,7 @@ class Cart {
         $container.slideUp('200');
         setTimeout(() => {
             $container.remove()
-        }, 1400); //удалаю сам элемент по таймеру когда анимация закончится
+        }, 2400); //удалаю сам элемент по таймеру когда анимация закончится
         
     }
 }
