@@ -15,6 +15,7 @@ class BrowseDropdown extends Dropdown {
                 this._hide(e);
             };
         });
+        //доделал browse
         /*
         $('body').on('click', (e) => {
             if (this.active === true)
