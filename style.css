@@ -2348,6 +2348,7 @@ footer nav .column a:hover {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .cart__qty-name {
@@ -2445,5 +2446,32 @@ footer nav .column a:hover {
   height: 70px;
   -webkit-box-shadow: black 0px -46px 74px 20px;
           box-shadow: black 0px -46px 74px 20px;
+}
+
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 14px;
+  height: 14px;
+  width: 56px;
+  position: relative;
+  padding: 0;
+}
+
+.star-ratings-css-top {
+  color: #e7711b;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.star-ratings-css-bottom {
+  padding: 0;
+  display: block;
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */
