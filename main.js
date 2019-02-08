@@ -1,6 +1,6 @@
 $(document).ready(() => {
     new BrowseDropdown();
-    new UniversalDropdown('.img-cart', '.cart', 'cart__focus');
+    new UniversalDropdown('.img-cart', '.cart', 'cart__focus', '.add');
 
     let cart = new Cart('getCart.json');
 

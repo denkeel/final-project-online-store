@@ -1,15 +1,16 @@
 
 class UniversalDropdown extends Dropdown {
-    constructor(button, dropdown, classActiveButton) {
+    constructor(button, dropdown, classActiveButton, custom) {
         super();
 
-        this._init(button, dropdown, classActiveButton);
+        this._init(button, dropdown, classActiveButton, custom);
         this._initEventHandlers();
     };
 
-    _init(button, dropdown, classActiveButton) {
+    _init(button, dropdown, classActiveButton, custom) {
         this.classButton = button;
         this.classDropdown = dropdown;
+        this.custom = custom;
         this.$btn = $(button);
         this.$dropdown = $(dropdown);
 
@@ -25,7 +26,12 @@ class UniversalDropdown extends Dropdown {
         });
         $(document).on('click', (e) => {
             console.log($(e.target).closest(this.classButton).length);
-            if (this.active && !$(e.target).closest(this.classButton).length) {
+            //отменяем закрытие при клике на блоки из конструктора
+            let custom = false;
+            if (this.custom !== undefined) {
+                custom = $(e.target).closest(this.custom).length;
+            }
+            if (this.active && !$(e.target).closest(this.classButton).length && !custom) {
                 this._hide(e);
             };
         });
