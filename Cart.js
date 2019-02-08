@@ -34,6 +34,16 @@ class Cart {
             text: 'go to cart'
         });
         $buttonCart.appendTo($(this.container));
+
+        let $qtyLabel = $('<div>', {
+            class: 'qty-label animated',
+            text: ''
+        });
+        $qtyLabel.hide();
+
+        let $cartImg = $(this.container).closest('.img-cart');
+
+        $qtyLabel.appendTo($cartImg);
     }
     _init(source) {
         this._render();
@@ -80,6 +90,7 @@ class Cart {
 
         $container.appendTo($('.cart__items-wrap'));
         $('<div class="hr"></div>').appendTo($('.cart__items-wrap'));
+
         if (aNew) {
             $container.hide();
             $container.fadeOut();
@@ -94,6 +105,19 @@ class Cart {
         } else {
             $(this.container).find('.cart__empty').fadeOut('fast');
         }
+        let $qtyLabel = $(this.container).next();
+        $qtyLabel.text(this.countGoods);
+        $qtyLabel.removeClass('wobble');
+        setTimeout(() => {
+            $qtyLabel.addClass('wobble');
+        }, 10);
+        if (this.countGoods < 1) {
+            $qtyLabel.fadeOut('fast');
+        } else {
+            $qtyLabel.fadeIn('medium');
+        }
+        //$qtyLabel.slideDown('fast');
+        //console.log(this.countGoods);
     }
     _updateCart(product) {
         let $container = $(`div[data-product=${product.id_product}]`);

@@ -505,7 +505,7 @@
                 <tr>
                     <td class="cart-page__empty" colspan="6">Your cart is empty.</td>
                 </tr>
-                
+
             </table>
             <div class="flex-buttons">
                 <a href="#" class="button-table">cLEAR SHOPPING CART</a>
@@ -620,7 +620,8 @@
     </footer>
     <div class="footer">
         <div class="container">
-            <p>© 2017 Brand All Rights Reserved.</p>
+            <p>© 2017-
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved.</p>
             <div class="social">
                 <a href="#" class="item"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="item"><i class="fab fa-twitter"></i></a>
@@ -634,19 +635,22 @@
     <script src="jquery-3.3.1.js"></script>
     <script src="Dropdown.js"></script>
     <script src="PageCart.js"></script>
+    <script src="default.js"></script>
     <script>
-        let cartPage = new PageCart('getCart.json');
-
         $('.add').click(e => {
             cart.addProduct(e.target);
         });
-
-        //Удаление товара
-        $('.cart').on('click', '.cart__delete-btn', e => {
-            e.preventDefault();
-            cart.remove(e.currentTarget);
-
+        $(document).on('scroll', () => {
+            if ($(document).scrollTop() > 0) {
+                $('.header').addClass('header___min');
+            } else {
+                $('.header').removeClass('header___min');
+            }
         });
+    </script>
+    <script src="UniversalDropdown.js"></script>
+    <script>
+        //NONE
     </script>
 </body>
 

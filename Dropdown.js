@@ -8,24 +8,21 @@ class BrowseDropdown extends Dropdown {
     constructor() {
         super();
         $('.search__dropdown-button').on('click', (e) => {
-            this._toggle(e);
-        });
-        $(document).on('click', (e) => {
-            if ($(event.target).closest('.search__dropdown-button').length === 0) {
-                this._hide(e);
+            if (!$(e.target).closest('.search__dropdown').length) {
+                this._toggle(e);
             };
         });
-        //доделал browse
-        /*
-        $('body').on('click', (e) => {
-            if (this.active === true)
-                this._hide(e);
-        });*/
+        $(document).on('click', (e) => {
+            if (this.active && !$(e.target).closest('.search__dropdown-button').length) {
+                this._hide();
+            };
+        });
     };
 
 
     _toggle(e) {
-        $('.search__dropdown').toggle();
+        console.log('toogle', this.active);
+        $('.search__dropdown').fadeToggle();
         $(e.currentTarget).toggleClass('focus');
         $(e.currentTarget).find('.fa-caret-down').toggleClass('rotate');
         if (this.active === false) {
@@ -35,14 +32,14 @@ class BrowseDropdown extends Dropdown {
         }
     }
 
-    _hide(e) {
+    _hide() {
 
-        //console.log(this.active);
+        console.log(this.active);
         if (this.active) {
             $('.search__dropdown').fadeOut();
             $('.header-left').find('.search__dropdown-button').removeClass('focus');
             $('.header-left').find('.fa-caret-down').removeClass('rotate');
-            super.active = false;
+            this.active = false;
         }
     }
 
@@ -53,4 +50,4 @@ class BrowseDropdown extends Dropdown {
             console.log('закрыто');
         }
     };
-}
+};

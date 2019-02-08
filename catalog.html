@@ -57,7 +57,7 @@
                 </form>
             </div>
             <div class="header-right">
-                <a class="img-cart" href="cart.html">
+                <a class="img-cart" href="javascript:void(0)">
                     <img src="img/cart.svg" alt="Your cart">
                     <div class="cart">
                         <div class="cart__empty">The cart is empty.
@@ -540,9 +540,11 @@
                     <input placeholder="" type="text">
                 </div>
             </div>
-            <a href="#" class="big-button-buy"><div class="img-wrap">
-                <img src="img/cart_pink.svg" alt="">
-            </div>Add to Cart</a>
+            <a href="#" class="big-button-buy">
+                <div class="img-wrap">
+                    <img src="img/cart_pink.svg" alt="">
+                </div>Add to Cart
+            </a>
         </div>
         <div class="container">
             <div class="flex-h2">
@@ -672,7 +674,8 @@
     </footer>
     <div class="footer">
         <div class="container">
-            <p>© 2017 Brand All Rights Reserved.</p>
+            <p>© 2017-
+                <script>document.write(new Date().getFullYear())</script> All Rights Reserved.</p>
             <div class="social">
                 <a href="#" class="item"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="item"><i class="fab fa-twitter"></i></a>
@@ -683,10 +686,14 @@
         </div>
     </div>
 
-    <script src="jquery-3.3.1.js"></script> 
-    <script src="main.js"></script>
+    <script src="jquery-3.3.1.js"></script>
     <script src="Dropdown.js"></script>
     <script src="Cart.js"></script>
+    <script src="UniversalDropdown.js"></script>
+    <script src="default.js"></script>
+    <script>
+        // NONE
+    </script>
 </body>
 
 </html>

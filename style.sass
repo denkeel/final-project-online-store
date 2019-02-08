@@ -758,7 +758,8 @@ $pink: #f16d7f
     transform: rotate(180deg)
 
 .cart
-    //display: none
+    cursor: default
+    display: none
     width: 250px
     margin-top: 10px
     border-radius: 5px
@@ -769,6 +770,13 @@ $pink: #f16d7f
     position: absolute
     border: 1px solid #e9e9e9
     z-index: 99999
+    &__items-wrap
+        max-height: 400px
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 1px
+    &__focus
+        color: $pink
     &__empty
         text-align: center
         color: grey
@@ -859,8 +867,24 @@ $pink: #f16d7f
         border-right: none
         margin: 0 auto
 
+.qty-label
+    top: -7px
+    right: -10px
+    position: absolute
+    border-radius: 12px   
+    background-color: $pink
+    line-height: 12px
+    min-width: 12px
+    text-align: center
+    padding: 3px
+    //padding-top: 4px
+    font-size: 13px
+    color: white
+    text-decoration: none
+    //font-weight: 
+
 .header-right:hover .cart
-    display: flex
+    //display: flex
 
 .cart-page
     &__empty
@@ -877,3 +901,7 @@ $pink: #f16d7f
     box-shadow: 0 0 10px 1px #ff000038 !important
     border: 1px solid #ff0000 !important
     //background-color: #00090040
+
+.header___min
+    height: 70px
+    box-shadow: black 0px -46px 74px 20px

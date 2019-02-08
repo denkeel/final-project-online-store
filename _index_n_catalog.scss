@@ -12,6 +12,10 @@ body {
     height: 100px;
     border-bottom: 1px solid #ececec;
     background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+    transition: height 0.5s, box-shadow 0.5s;
 }
 
 .header-flex {
@@ -92,6 +96,7 @@ button {
 
 .img-cart {
     height: 29px;
+    position: relative;
 }
 
 .header-form input {
