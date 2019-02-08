@@ -1329,6 +1329,27 @@ footer nav .column a:hover {
   outline-offset: -2px;
 }
 
+.buy-form .container .column .wrap-buy .big-button___disabled {
+  background-color: #e1e1e1;
+  color: #ffffff;
+  cursor: default;
+}
+
+.buy-form .container .column .wrap-buy .big-button___disabled:hover {
+  background-color: #e1e1e1;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.buy-form .container .column .wrap-buy .big-button___disabled:focus {
+  background-color: #e1e1e1;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
 .mega {
   border-radius: 5px;
   background-color: #ffffff;

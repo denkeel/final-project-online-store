@@ -86,8 +86,14 @@ class PageCart {
             if (e.target.validity.valid === true) {
                 this._updateCart(product.id_product);
                 $(e.target).removeClass('red-background');
+                $('.big-button').removeClass('big-button___disabled');
+                $('.big-button').unbind('click');
             } else {
                 $(e.target).addClass('red-background');
+                $('.big-button').addClass('big-button___disabled');
+                $('.big-button').click(function(event){
+                    event.preventDefault();
+                });
             }
         });
         $input.appendTo($wrapInput);
