@@ -775,6 +775,7 @@ footer nav .column a:hover {
 }
 
 .navi-bread .container .navi-bread-right a {
+  color: black;
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
@@ -2297,6 +2298,7 @@ footer nav .column a:hover {
 }
 
 .cart__button {
+  color: black;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
