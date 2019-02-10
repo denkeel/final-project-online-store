@@ -1528,9 +1528,11 @@ footer nav .column a:hover {
 .checkout__h2 {
   color: #222222;
   font-size: 16px;
-  font-weight: 9  00;
+  line-height: 78px;
+  font-weight: 900;
   text-transform: uppercase;
-  margin: 31px 0;
+  outline: none;
+  cursor: pointer;
 }
 
 .step-buy {
