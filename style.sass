@@ -613,6 +613,7 @@ $pink: #f16d7f
     &__range
         width: 100%
         margin-top: 20px
+        margin-bottom: 20px
     &__p-text
         display: flex
         justify-content: space-between
@@ -947,3 +948,30 @@ $pink: #f16d7f
         padding: 0
         display: block
         z-index: 0
+
+.ui-slider-horizontal
+    height: 7px
+
+.ui-widget
+    background-color: #f6f4f4
+
+.ui-widget-header
+    background-color: $pink
+
+.ui-slider-handle
+    border-radius: 13px
+
+.ui-widget.ui-widget-content
+    border: none
+
+.ui-state-default, .ui-widget-content .ui-state-default
+    border: none
+    background-color: $pink
+    height: 13px
+    width: 13px
+    outline: none
+    cursor: pointer
+
+.ui-slider-horizontal .ui-slider-handle
+    top: -0.2em
+    margin-left: -0.4em
