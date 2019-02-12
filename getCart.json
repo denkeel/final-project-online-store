@@ -1,0 +1,22 @@
+{
+  "amount": 56,
+  "countGoods": 3,
+  "contents": [
+    {
+      "id_product": 6,
+      "product_name": "Pants Legbo",
+      "price": 13.5,
+      "quantity": 2,
+      "img": "img/item7.jpg",
+      "rating": "0.8"
+    },
+    {
+      "id_product": 7,
+      "product_name": "JACKET 2X2",
+      "price": 29.0,
+      "quantity": 1,
+      "img": "img/item8.jpg",
+      "rating": ".93"
+    }
+  ]
+}
