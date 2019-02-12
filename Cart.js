@@ -17,7 +17,7 @@ class Cart {
 
         $totalAmount.append(`<div class="cart__name-total">TOTAL</div>`);
         $totalAmount.append(`<div class="sum-price">$0.0</div>`);
-        
+
         $cartItemsDiv.appendTo($(this.container));
         $totalAmount.appendTo($(this.container));
 
@@ -34,6 +34,16 @@ class Cart {
             text: 'go to cart'
         });
         $buttonCart.appendTo($(this.container));
+
+        let $qtyLabel = $('<div>', {
+            class: 'qty-label animated',
+            text: ''
+        });
+        $qtyLabel.hide();
+
+        let $cartImg = $(this.container).closest('.img-cart');
+
+        $qtyLabel.appendTo($cartImg);
     }
     _init(source) {
         this._render();
@@ -69,6 +79,10 @@ class Cart {
             class: 'cart__text'
         });
         $cart__text.append(`<p class="cart__item-name">${product.product_name}</p>`);
+        $cart__text.append(`<div class="star-ratings-css">
+        <div class="star-ratings-css-top" style="width: ${product.rating * 100}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>`);
         $cart__text.append(`<p class="cart__qty-name">${product.quantity} x $${product.price}</p>`);
         $cart__text.appendTo($container);
 
@@ -80,6 +94,7 @@ class Cart {
 
         $container.appendTo($('.cart__items-wrap'));
         $('<div class="hr"></div>').appendTo($('.cart__items-wrap'));
+
         if (aNew) {
             $container.hide();
             $container.fadeOut();
@@ -94,6 +109,19 @@ class Cart {
         } else {
             $(this.container).find('.cart__empty').fadeOut('fast');
         }
+        let $qtyLabel = $(this.container).next();
+        $qtyLabel.text(this.countGoods);
+        $qtyLabel.removeClass('wobble');
+        setTimeout(() => {
+            $qtyLabel.addClass('wobble');
+        }, 10);
+        if (this.countGoods < 1) {
+            $qtyLabel.fadeOut('fast');
+        } else {
+            $qtyLabel.fadeIn('medium');
+        }
+        //$qtyLabel.slideDown('fast');
+        //console.log(this.countGoods);
     }
     _updateCart(product) {
         let $container = $(`div[data-product=${product.id_product}]`);
@@ -153,6 +181,6 @@ class Cart {
         setTimeout(() => {
             $container.remove()
         }, 2400); //удалаю сам элемент по таймеру когда анимация закончится
-        
+
     }
 }
