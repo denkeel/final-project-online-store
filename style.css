@@ -2480,27 +2480,27 @@ footer nav .column a:hover {
   z-index: 0;
 }
 
-.ui-slider-horizontal {
+.product__price-box .ui-slider-horizontal {
   height: 7px;
 }
 
-.ui-widget {
+.product__price-box .ui-widget {
   background-color: #f6f4f4;
 }
 
-.ui-widget-header {
+.product__price-box .ui-widget-header {
   background-color: #f16d7f;
 }
 
-.ui-slider-handle {
+.product__price-box .ui-slider-handle {
   border-radius: 13px;
 }
 
-.ui-widget.ui-widget-content {
+.product__price-box .ui-widget.ui-widget-content {
   border: none;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default {
+.product__price-box .ui-state-default, .ui-widget-content .ui-state-default {
   border: none;
   background-color: #f16d7f;
   height: 13px;
@@ -2509,8 +2509,112 @@ footer nav .column a:hover {
   cursor: pointer;
 }
 
-.ui-slider-horizontal .ui-slider-handle {
+.product__price-box .ui-slider-horizontal .ui-slider-handle {
   top: -0.2em;
   margin-left: -0.4em;
+}
+
+body {
+  position: relative;
+}
+
+.no-scroll {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.start-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 111111;
+  background-color: #00000090;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.start-popup__wrap {
+  position: relative;
+  height: 500px;
+}
+
+.start-popup__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  color: #000000a8;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.start-popup__close:hover {
+  background-color: #00000066;
+  color: white;
+}
+
+.start-popup__note {
+  position: absolute;
+  color: #FFFFFFBB;
+  width: 200px;
+}
+
+.start-popup__text {
+  text-align: center;
+}
+
+.start-popup__arrow {
+  font-size: 40px;
+  text-align: center;
+}
+
+.start-popup__note1 {
+  top: 27%;
+  left: 45%;
+}
+
+.start-popup__note2 {
+  top: 27%;
+  left: 30%;
+}
+
+.start-popup__note3 {
+  top: 14%;
+  left: 76%;
+}
+
+.start-popup__introduce {
+  text-align: center;
+  color: white;
+  margin-top: -100px;
+}
+
+.start-popup__skills {
+  margin: 20px auto;
+  text-align: left;
+  margin-top: 20px;
+  width: 500px;
+}
+
+.skills {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skill {
+  color: white;
+  display: block;
+  padding: 3px 6px;
+  margin-right: 5px;
+  background-color: #f16d7f;
+  border-radius: 5px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

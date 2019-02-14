@@ -1,6 +1,33 @@
 $(document).ready(() => {
     new BrowseDropdown();
     new UniversalDropdown('.img-cart', '.cart', 'cart__focus', '.add');
+    function popUp() {
+        $("html, body").animate({ scrollTop: 0 });
+
+        let $popup = $('.start-popup');
+
+
+        /*
+        let $note1 = $('<div>', {
+            class: 'start-popup__note'
+        })
+        let $arrow1 = $('');
+        let $text1h3 = 
+        let $text1h6 =*/ 
+
+        $popup.on('click', () => {
+            $popup.hide();
+            $('body').removeClass('no-scroll');
+        });
+
+        $('body').addClass('no-scroll');
+
+        $popup.hide();
+        $('body').append($popup);
+        $popup.fadeIn('slow');
+    }
+
+    popUp();
 
     let cart = new Cart('getCart.json');
 
@@ -34,7 +61,6 @@ $(document).ready(() => {
             $('.header').removeClass('header___min');
         }
     });
-    
 });
 
 // Непонятно нужно ли мне теперь для каждого элемента, для которого я хочу создать логику

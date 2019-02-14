@@ -949,22 +949,22 @@ $pink: #f16d7f
         display: block
         z-index: 0
 
-.ui-slider-horizontal
+.product__price-box .ui-slider-horizontal
     height: 7px
 
-.ui-widget
+.product__price-box .ui-widget
     background-color: #f6f4f4
 
-.ui-widget-header
+.product__price-box .ui-widget-header
     background-color: $pink
 
-.ui-slider-handle
+.product__price-box .ui-slider-handle
     border-radius: 13px
 
-.ui-widget.ui-widget-content
+.product__price-box .ui-widget.ui-widget-content
     border: none
 
-.ui-state-default, .ui-widget-content .ui-state-default
+.product__price-box .ui-state-default, .ui-widget-content .ui-state-default
     border: none
     background-color: $pink
     height: 13px
@@ -972,6 +972,86 @@ $pink: #f16d7f
     outline: none
     cursor: pointer
 
-.ui-slider-horizontal .ui-slider-handle
+.product__price-box .ui-slider-horizontal .ui-slider-handle
     top: -0.2em
     margin-left: -0.4em
+
+body
+    position: relative
+
+.no-scroll
+    height: 100%
+    min-height: 100%
+    overflow: hidden
+
+.start-popup
+    position: absolute
+    //position: relative
+    top: 0
+    left: 0
+    z-index: 111111
+    background-color: #00000090
+    height: 100%
+    width: 100%
+    display: none
+    &__wrap
+        position: relative
+        height: 500px
+    &__close
+        position: absolute
+        top: 0
+        right: 0
+        //right: -80px
+        height: 50px
+        width: 50px
+        color: #000000a8
+        line-height: 50px
+        font-size: 20px
+        text-align: center
+        cursor: pointer
+        &:hover
+            background-color: #00000066
+            color: white
+    &__note
+        position: absolute
+        color: #FFFFFFBB
+        width: 200px
+    &__text
+        text-align: center
+    &__arrow
+        font-size: 40px
+        text-align: center
+    &__note1
+        top: 27%
+        left: 45%
+    &__note2
+        top: 27%
+        left: 30%
+    &__note3
+        top: 14%
+        left: 76%
+    &__introduce
+        text-align: center
+        color: white
+        margin-top: -100px
+    &__skills
+        margin: 20px auto
+        text-align: left
+        //margin-left: -450px
+        margin-top: 20px
+        width: 500px
+
+.skills
+    margin-top: 10px
+    display: flex
+
+.skill
+    color: white
+    display: block
+    padding: 3px 6px
+    margin-right: 5px
+    background-color: $pink
+    border-radius: 5px
+    font-weight: 700
+
+        
